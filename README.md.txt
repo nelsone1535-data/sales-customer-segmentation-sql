@@ -1,6 +1,6 @@
-# Sales Performance & Customer Segmentation Analysis
+Sales Performance & Customer Segmentation Analysis
 
-## Project Overview
+Project Overview
 
 This project analyzes retail sales data using SQL to understand product performance, regional trends, profitability, and customer segmentation.
 
@@ -8,7 +8,7 @@ The analysis simulates real-world business questions that a data analyst might i
 
 ---
 
-## Tools Used
+Tools Used
 
 - PostgreSQL
 - SQL
@@ -16,7 +16,7 @@ The analysis simulates real-world business questions that a data analyst might i
 
 ---
 
-## Dataset
+Dataset
 
 This project uses a retail sales dataset commonly known as the "Superstore Dataset."
 
@@ -32,7 +32,7 @@ The dataset includes:
 
 ---
 
-## Business Questions Answered
+Business Questions Answered
 
 1. Which product categories generate the most revenue?
 2. Which sub-categories are the most profitable?
@@ -42,7 +42,7 @@ The dataset includes:
 
 ---
 
-## Key Insights
+Key Insights
 
 - Technology products generate the highest revenue.
 - Certain sub-categories drive a disproportionate amount of total profit.
