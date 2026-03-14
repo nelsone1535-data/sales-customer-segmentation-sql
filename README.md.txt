@@ -61,6 +61,7 @@ schema.sql
 queries.sql
 insights.md
 
+---
 
 SQL Skills Demonstrated:
 
