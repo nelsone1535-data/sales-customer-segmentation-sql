@@ -1,0 +1,90 @@
+-- =====================================================
+-- SALES PERFORMANCE & CUSTOMER SEGMENTATION ANALYSIS
+-- =====================================================
+
+
+
+-- =====================================================
+-- 1. Total Sales by Category
+-- Business Question: Which product categories generate the most revenue?
+-- =====================================================
+
+SELECT
+    category,
+    SUM(sales) AS total_sales
+FROM sales
+GROUP BY category
+ORDER BY total_sales DESC;
+
+
+
+-- =====================================================
+-- 2. Regional Sales Performance
+-- Business Question: Which regions generate the most sales?
+-- =====================================================
+
+SELECT
+    region,
+    SUM(sales) AS total_sales
+FROM sales
+GROUP BY region
+ORDER BY total_sales DESC;
+
+
+
+-- =====================================================
+-- 3. Profitability by Discount Level
+-- Business Question: Do higher discounts reduce profit?
+-- =====================================================
+
+SELECT
+    discount,
+    COUNT(*) AS number_of_orders,
+    ROUND(AVG(profit), 2) AS avg_profit
+FROM sales
+GROUP BY discount
+ORDER BY discount;
+
+
+
+-- =====================================================
+-- 4. Category Profit Ranking
+-- Business Question: Which product categories generate the most profit?
+-- =====================================================
+
+SELECT
+    category,
+    SUM(profit) AS total_profit,
+    RANK() OVER (ORDER BY SUM(profit) DESC) AS profit_rank
+FROM sales
+GROUP BY category;
+
+
+
+-- =====================================================
+-- 5. Most Profitable Sub-Categories
+-- Business Question: Which product types drive the most profit?
+-- =====================================================
+
+SELECT
+    sub_category,
+    SUM(profit) AS total_profit,
+    RANK() OVER (ORDER BY SUM(profit) DESC) AS profit_rank
+FROM sales
+GROUP BY sub_category;
+
+
+
+-- =====================================================
+-- 6. Profitability by Customer Segment
+-- Business Question: Which customer segments generate the most profit?
+-- =====================================================
+
+SELECT
+    segment,
+    SUM(sales) AS total_sales,
+    SUM(profit) AS total_profit,
+    ROUND(AVG(profit), 2) AS avg_profit
+FROM sales
+GROUP BY segment
+ORDER BY total_profit DESC;

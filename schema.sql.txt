@@ -1,0 +1,20 @@
+=====================================
+ Customer Segmentation Schema
+=====================================
+
+This file documents the tables used in the SQL analysis project.
+
+CREATE TABLE sales (
+    ship_mode TEXT,
+    segment TEXT,
+    country TEXT,
+    city TEXT,
+    state TEXT,
+    postal_code TEXT,
+    region TEXT,
+    category TEXT,
+    sub_category TEXT,
+    sales NUMERIC,
+    quantity INT,
+    discount NUMERIC,
+    profit NUMERIC); 
